@@ -1,0 +1,9 @@
+{
+  "objectiveDirections": ["minimize"],
+  "constraintCount": 0,
+  "intervalMultiplier": 1.96,
+  "evaluations": [
+    { "candidateId": 1, "objectiveMeans": [1.0], "objectiveStandardDeviations": [0.1], "constraintMeans": [], "constraintStandardDeviations": [] },
+    { "candidateId": 2, "objectiveMeans": [2.0], "objectiveStandardDeviations": [0.1], "constraintMeans": [], "constraintStandardDeviations": [] }
+  ]
+}

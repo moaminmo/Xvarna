@@ -1,0 +1,9 @@
+{
+  "objectiveDirections": ["minimize"],
+  "constraintCount": 1,
+  "cvarAlpha": 0.8,
+  "outcomes": [
+    { "candidateId": 1, "scenarioId": 1, "probability": 0.8, "objectives": [1.0], "constraintResiduals": [-1.0] },
+    { "candidateId": 1, "scenarioId": 2, "probability": 0.2, "objectives": [5.0], "constraintResiduals": [1.0] }
+  ]
+}

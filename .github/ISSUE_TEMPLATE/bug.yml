@@ -1,0 +1,30 @@
+name: Bug report
+description: Report reproducible incorrect behavior or a crash.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: dropdown
+    id: host
+    attributes:
+      label: Host
+      options: [Rhino 8, Rhino 9, CLI, Other]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: XVARNA version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include exact inputs, model units, tolerances, and expected versus actual output.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Paste the XV Info output and relevant logs.

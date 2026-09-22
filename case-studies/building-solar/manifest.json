@@ -1,0 +1,2 @@
+{"schemaVersion":"1.0.0","id":"building-solar","status":"PROTOCOL_READY_MODEL_PENDING","units":"metres","workflow":"01-zurvan-sun-hours.ghx","requiredOutputs":["evidence-passport.json","report.html","diagnostics.zip"],"model":{"source":null,"license":null,"sha256":null},"limitations":["Direct-sun screening; not whole-building energy simulation"]}
+

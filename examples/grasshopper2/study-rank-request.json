@@ -1,0 +1,17 @@
+{
+  "problem": {
+    "variables": [
+      { "variableId": 1, "kind": "continuous", "lowerBound": 0.0, "upperBound": 1.0 }
+    ],
+    "objectiveDirections": ["minimize", "maximize"],
+    "constraintCount": 0
+  },
+  "candidates": [
+    { "candidateId": 1, "generation": 0, "parameters": [0.2] },
+    { "candidateId": 2, "generation": 0, "parameters": [0.8] }
+  ],
+  "evaluations": [
+    { "candidateId": 1, "objectives": [0.2, 0.4], "constraintResiduals": [] },
+    { "candidateId": 2, "objectives": [0.8, 0.9], "constraintResiduals": [] }
+  ]
+}

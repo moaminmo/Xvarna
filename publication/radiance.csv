@@ -1,0 +1,4 @@
+quantity,reference_lux,observed_lux
+sky,10000,9998.81291
+reflection,5000,4999.4073499999995
+ambient_disabled,0,0

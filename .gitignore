@@ -1,0 +1,50 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# .NET / Visual Studio
+**/bin/
+**/obj/
+/.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rhino / Grasshopper build artifacts
+*.gha
+*.rhp
+*.yak
+manifest.yml
+
+# IDEs
+/.idea/
+/.vscode/*.log
+.DS_Store
+Thumbs.db
+
+# Test and coverage output
+/TestResults/
+/coverage/
+*.coverage
+*.coveragexml
+
+# Benchmarks and generated artifacts
+/artifacts/
+/benchmarks/results/
+/validation/reports/generated/
+
+# Local caches and environment
+/.xvarna-cache/
+/.venv-docs/
+/.env
+/.env.*
+!.env.example
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.log
+
+/_audit/

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xvarna.Native\Xvarna.Native.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="Exists('..\..\artifacts\native\win-x64\xvarna_core.dll')">
+    <None Include="..\..\artifacts\native\win-x64\xvarna_core.dll"
+          Link="xvarna_core.dll"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+<ItemGroup><Compile Include="../Xvarna.Grasshopper/AnalysisResultCache.cs" Link="AnalysisResultCache.cs" /></ItemGroup>
+</Project>

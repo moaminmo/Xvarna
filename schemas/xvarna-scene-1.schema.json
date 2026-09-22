@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xvarna.dev/schemas/scene",
+  "title": "XVARNA Canonical Scene Document",
+  "description": "Versioned canonical-metre source scene. Acceleration structures are rebuilt and are never serialized as authoritative data.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "schemaVersion", "units", "build", "meshes", "instances"],
+  "properties": {
+    "schema": { "const": "https://xvarna.dev/schemas/scene" },
+    "schemaVersion": { "const": 1 },
+    "units": { "const": "m" },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["absoluteToleranceMeters", "maximumLeafSize", "threadCount"],
+      "properties": {
+        "absoluteToleranceMeters": { "type": "number", "exclusiveMinimum": 0 },
+        "maximumLeafSize": { "type": "integer", "minimum": 1, "maximum": 64 },
+        "threadCount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "meshes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["meshId", "positions", "triangles"],
+        "properties": {
+          "meshId": { "type": "integer", "minimum": 1 },
+          "positions": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": { "type": "number" }
+            }
+          },
+          "triangles": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": { "type": "integer", "minimum": 0, "maximum": 4294967295 }
+            }
+          }
+        }
+      }
+    },
+    "instances": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["meshId", "objectId", "instanceId", "transform", "categoryMask", "layer"],
+        "properties": {
+          "meshId": { "type": "integer", "minimum": 1 },
+          "objectId": { "type": "integer", "minimum": 0 },
+          "instanceId": { "type": "integer", "minimum": 0 },
+          "transform": {
+            "type": "array",
+            "minItems": 16,
+            "maxItems": 16,
+            "items": { "type": "number" }
+          },
+          "categoryMask": { "type": "integer", "minimum": 0 },
+          "layer": { "enum": ["static", "dynamic"] }
+        }
+      }
+    }
+  }
+}

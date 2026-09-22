@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.2.0",
+  "license": "CC0-1.0",
+  "provenance": "Programmatically authored analytic fixtures by XVARNA contributors.",
+  "fixtures": [
+    {
+      "file": "open_quad.obj",
+      "expected": {
+        "analysisReady": true,
+        "watertight": false,
+        "surfaceArea": 1.0,
+        "boundaryEdges": 4
+      }
+    },
+    {
+      "file": "tetrahedron.obj",
+      "expected": {
+        "analysisReady": true,
+        "watertight": true,
+        "signedVolume": 0.16666666666666666,
+        "boundaryEdges": 0
+      }
+    },
+    {
+      "file": "broken_mesh.obj",
+      "expected": {
+        "analysisReady": false,
+        "duplicateFaces": 1,
+        "degenerateFaces": 1,
+        "isolatedVertices": 1
+      }
+    }
+  ]
+}

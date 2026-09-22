@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC0-1.0",
+  "generator": "eng/generate-benchmark-corpus.ps1",
+  "storagePolicy": "Generated OBJ/CSV files live under ignored artifacts/benchmark-corpus and are never committed.",
+  "coordinateSystem": "right-handed Cartesian, metres",
+  "tiers": [
+    { "id": "S", "gridCellsPerAxis": 224, "triangles": 100352, "sensors": 10000, "purpose": "interactive building/site study" },
+    { "id": "M", "gridCellsPerAxis": 707, "triangles": 999698, "sensors": 100000, "purpose": "large building or urban block" },
+    { "id": "L", "gridCellsPerAxis": 1582, "triangles": 5005448, "sensors": 250000, "purpose": "city-scale stress and memory/chunking" }
+  ],
+  "pathological": [
+    "validation/meshes/broken_mesh.obj",
+    "validation/meshes/open_quad.obj",
+    "validation/meshes/tetrahedron.obj",
+    "generated far-origin, millimetre-scale and kilometre-scale variants"
+  ]
+}

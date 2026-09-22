@@ -1,0 +1,21 @@
+{
+  "objectiveDirections": ["minimize", "minimize"],
+  "candidates": [
+    { "candidateId": 1, "generation": 0, "values": [1.0] },
+    { "candidateId": 2, "generation": 0, "values": [2.0] },
+    { "candidateId": 3, "generation": 0, "values": [3.0] },
+    { "candidateId": 4, "generation": 0, "values": [4.0] },
+    { "candidateId": 5, "generation": 0, "values": [5.0] }
+  ],
+  "observations": [
+    { "candidateId": 1, "fidelity": "fast", "objectives": [1.0, 5.0], "cost": 1.0, "noiseStandardDeviations": [0.01, 0.01], "evidenceHash": "fast-1" },
+    { "candidateId": 2, "fidelity": "fast", "objectives": [2.0, 4.0], "cost": 1.0, "noiseStandardDeviations": [0.01, 0.01], "evidenceHash": "fast-2" },
+    { "candidateId": 3, "fidelity": "fast", "objectives": [3.0, 3.0], "cost": 1.0, "noiseStandardDeviations": [0.01, 0.01], "evidenceHash": "fast-3" },
+    { "candidateId": 4, "fidelity": "fast", "objectives": [4.0, 2.0], "cost": 1.0, "noiseStandardDeviations": [0.01, 0.01], "evidenceHash": "fast-4" },
+    { "candidateId": 5, "fidelity": "fast", "objectives": [5.0, 1.0], "cost": 1.0, "noiseStandardDeviations": [0.01, 0.01], "evidenceHash": "fast-5" },
+    { "candidateId": 1, "fidelity": "reference", "objectives": [3.0, 11.0], "cost": 50.0, "noiseStandardDeviations": [0.0, 0.0], "evidenceHash": "reference-1" },
+    { "candidateId": 2, "fidelity": "reference", "objectives": [5.0, 9.0], "cost": 50.0, "noiseStandardDeviations": [0.0, 0.0], "evidenceHash": "reference-2" },
+    { "candidateId": 3, "fidelity": "reference", "objectives": [7.0, 7.0], "cost": 50.0, "noiseStandardDeviations": [0.0, 0.0], "evidenceHash": "reference-3" }
+  ],
+  "policy": { "batchSize": 2, "monteCarloSamples": 256, "seed": 9, "referencePoint": [20.0, 20.0], "minimumStandardDeviation": 0.01 }
+}

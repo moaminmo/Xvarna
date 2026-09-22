@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "recorded_date": "2026-09-19",
+  "environment": "Windows x64",
+  "scope": "Analytical sky/ground fixture, not a measured-building validation. Fast daylight intentionally omits interreflection; use the separate Radiance path when it matters.",
+  "reproduce": "$env:RAYPATH = 'C:/Radiance/lib'\ncargo run -p xvarna-hvare --example radiance_acceptance --locked -- 'C:/Radiance/bin' publication/radiance.csv",
+  "figure_is_host_screenshot": false,
+  "sha256": {
+    "publication/evidence.png": "9c801a57d2305276c7e90aa4ba8f9b0f362314013420c0dd45665244418c22c0",
+    "publication/evidence.svg": "11ed49eaac6c4588015157a74a61e49cb3cfd7c3aacc99632b3ad6ca7c3ea67e",
+    "publication/figure-config.json": "0fde8a7bd362a236432fa81f857110aff92a65e599511498cf7b29bd69491bef",
+    "publication/linkedin.md": "f323ca06354ad8151a9efec38fbca0845c955974f374af81238ce7d2b32426dc",
+    "publication/radiance.csv": "aa09a0ca1a9d01baa035589ab409e81de6523ad4edbbb53176668a1af3e63959",
+    "publication/README.md": "c43cce954d9b5420f6b881951be0b0c2d11b66bd193fd632ffaa6cc913e225ed",
+    "publication/render_figure.py": "8f211f5ca9e31f050c20736501ed589ca15912e4884a94445d940ecbf25b5693",
+    "publication/requirements.txt": "b0aff417d12e0c140fecc7a5a7f88545960a1d6550109fefdc49110e04189292",
+    "crates/xvarna-hvare/examples/radiance_acceptance.rs": "dae60f5f1f25d4b665571e8f95620a95eefce3bc93df53f863db560083dec9fa"
+  }
+}

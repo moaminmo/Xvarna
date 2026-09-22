@@ -1,0 +1,35 @@
+{
+  "cameras": [
+    {
+      "observerId": 1,
+      "position": { "x": 0.0, "y": 0.0, "z": 1.6 },
+      "forward": { "x": 0.0, "y": 1.0, "z": 0.0 },
+      "up": { "x": 0.0, "y": 0.0, "z": 1.0 },
+      "weight": 1.0
+    }
+  ],
+  "targets": [
+    {
+      "targetId": 7,
+      "first": { "x": -1.0, "y": 10.0, "z": 0.0 },
+      "second": { "x": 1.0, "y": 10.0, "z": 0.0 },
+      "third": { "x": 0.0, "y": 10.0, "z": 3.0 },
+      "categoryMask": 2,
+      "categoryWeight": 1.0
+    }
+  ],
+  "options": {
+    "samplesPerPatch": 64,
+    "horizontalFieldOfViewDegrees": 90.0,
+    "verticalFieldOfViewDegrees": 60.0,
+    "maximumDistance": 1000.0,
+    "endpointClearance": 0.0001,
+    "occluderCategoryMask": 18446744073709551615,
+    "targetCategoryMask": 18446744073709551615,
+    "greenCategoryMask": 2,
+    "distanceReference": 10.0,
+    "distanceExponent": 1.0,
+    "directionExponent": 1.0,
+    "twoSidedTargets": true
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xvarna.dev/schema/study-manifest-0.16.0.json",
+  "title": "XVARNA Study Manifest 0.16.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "studyId",
+    "title",
+    "createdUtc",
+    "engineVersion",
+    "parameters",
+    "objectives",
+    "optimizer"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "0.16.0" },
+    "studyId": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "createdUtc": { "type": "string", "format": "date-time" },
+    "engineVersion": { "type": "string", "minLength": 1 },
+    "parameters": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": { "$ref": "#/$defs/parameter" }
+    },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "items": { "$ref": "#/$defs/objective" }
+    },
+    "constraints": {
+      "type": "array",
+      "maxItems": 256,
+      "items": { "$ref": "#/$defs/constraint" }
+    },
+    "baselineVariantId": { "type": ["integer", "null"], "minimum": 1 },
+    "optimizer": { "$ref": "#/$defs/optimizer" },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameterId", "name", "kind", "lowerBound", "upperBound"],
+      "properties": {
+        "parameterId": { "type": "integer", "minimum": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["continuous", "integer", "categorical"] },
+        "lowerBound": { "type": "number" },
+        "upperBound": { "type": "number" },
+        "unit": { "type": "string" },
+        "categories": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objectiveId", "name", "direction"],
+      "properties": {
+        "objectiveId": { "type": "integer", "minimum": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "direction": { "enum": ["minimize", "maximize"] },
+        "unit": { "type": "string" },
+        "components": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["constraintId", "name"],
+      "properties": {
+        "constraintId": { "type": "integer", "minimum": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "unit": { "type": "string" }
+      }
+    },
+    "optimizer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "populationSize",
+        "offspringSize",
+        "archiveCapacity",
+        "seed",
+        "crossoverProbability",
+        "mutationProbability",
+        "crossoverDistributionIndex",
+        "mutationDistributionIndex"
+      ],
+      "properties": {
+        "populationSize": { "type": "integer", "minimum": 4, "maximum": 4096 },
+        "offspringSize": { "type": "integer", "minimum": 1, "maximum": 4096 },
+        "archiveCapacity": { "type": "integer", "minimum": 1, "maximum": 4096 },
+        "seed": { "type": "integer", "minimum": 0 },
+        "crossoverProbability": { "type": "number", "minimum": 0, "maximum": 1 },
+        "mutationProbability": { "type": "number", "minimum": 0, "maximum": 1 },
+        "crossoverDistributionIndex": { "type": "number", "exclusiveMinimum": 0 },
+        "mutationDistributionIndex": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    }
+  }
+}

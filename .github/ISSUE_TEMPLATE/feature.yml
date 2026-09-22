@@ -1,0 +1,23 @@
+name: Capability proposal
+description: Propose a measurable user workflow or analysis capability.
+title: "[Proposal]: "
+labels: [proposal]
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: User workflow
+      description: Who needs this, what do they do today, and what decision should XVARNA enable?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: State measurable accuracy, performance, interoperability, and UX outcomes.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References and comparison tools

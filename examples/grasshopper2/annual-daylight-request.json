@@ -1,0 +1,14 @@
+{
+  "sensors": [
+    {
+      "sensorId": 1,
+      "positionX": 0.0,
+      "positionY": 0.0,
+      "positionZ": 0.8,
+      "normalX": 0.0,
+      "normalY": 0.0,
+      "normalZ": 1.0,
+      "area": 1.0
+    }
+  ]
+}

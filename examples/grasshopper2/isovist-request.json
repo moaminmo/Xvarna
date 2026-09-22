@@ -1,0 +1,23 @@
+{
+  "viewpoints": [
+    {
+      "viewpointId": 1,
+      "positionX": 0.0,
+      "positionY": 0.0,
+      "positionZ": 1.6,
+      "planeNormalX": 0.0,
+      "planeNormalY": 0.0,
+      "planeNormalZ": 1.0,
+      "forwardX": 0.0,
+      "forwardY": 1.0,
+      "forwardZ": 0.0
+    }
+  ],
+  "options": {
+    "sampleCount": 720,
+    "fieldOfViewDegrees": 360.0,
+    "maximumDistance": 100.0,
+    "eyeOffset": 0.0001,
+    "categoryMask": 18446744073709551615
+  }
+}

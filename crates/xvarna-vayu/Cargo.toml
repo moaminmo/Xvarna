@@ -1,0 +1,22 @@
+[package]
+name = "xvarna-vayu"
+description = "VAYU portable GPU acceleration and deterministic CPU fallback for XVARNA."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[dependencies]
+bytemuck.workspace = true
+pollster.workspace = true
+wgpu.workspace = true
+xvarna-cache = { path = "../xvarna-cache" }
+xvarna-geometry = { path = "../xvarna-geometry" }
+xvarna-scene = { path = "../xvarna-scene" }
+xvarna-types = { path = "../xvarna-types" }
+
+[lints]
+workspace = true

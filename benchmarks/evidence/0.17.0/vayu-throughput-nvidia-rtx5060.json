@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "0.16.0",
+  "generatedUtc": "2026-09-03T17:05:33.7690251+00:00",
+  "backendPolicy": "gpu",
+  "adapterFilter": "NVIDIA",
+  "warmupCount": 2,
+  "iterationCount": 5,
+  "cases": [
+    {
+      "schemaVersion": "0.16.0",
+      "engine": "VAYU",
+      "backend": "VAYU Portable GPU",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "creationFallback": false,
+      "creationMessage": "ready",
+      "rays": 4096,
+      "warmupCount": 2,
+      "iterationCount": 5,
+      "triangles": 2,
+      "nodes": 2,
+      "sceneGpuBytes": 332,
+      "geometryChunks": 1,
+      "uniqueTriangles": 2,
+      "instances": 1,
+      "sceneCacheHit": true,
+      "streamedGeometry": false,
+      "hostSnapshotBytes": 332,
+      "cold": {
+        "totalMilliseconds": 20.405,
+        "uploadMilliseconds": 1.512,
+        "executionMilliseconds": 18.849999999999998,
+        "readbackMilliseconds": 0.043000000000000003
+      },
+      "warm": {
+        "minimumMilliseconds": 0.25,
+        "p50Milliseconds": 0.259,
+        "p95Milliseconds": 0.28200000000000003,
+        "meanMilliseconds": 0.262,
+        "uploadP50Milliseconds": 0.15,
+        "executionP50Milliseconds": 0.097,
+        "readbackP50Milliseconds": 0.014
+      },
+      "cpu": {
+        "p50Milliseconds": 0.308,
+        "millionRaysPerSecond": 13.2987012987013
+      },
+      "backendMillionRaysPerSecond": 15.814671814671815,
+      "runtime": {
+        "traces": 8,
+        "dispatches": 8,
+        "reusableBatches": 8,
+        "runtimeFallbacks": 0,
+        "scratchGenerations": 1,
+        "scratchCapacityRays": 4096,
+        "scratchGpuBytes": 1179712,
+        "uploadedBytes": 1573120,
+        "readbackBytes": 1572864,
+        "geometryUploads": 0,
+        "geometryUploadedBytes": 0,
+        "deviceHealthy": true,
+        "deviceLosses": 0,
+        "executionErrors": 0,
+        "lastError": ""
+      },
+      "parity": {
+        "stateMismatches": 0,
+        "identityMismatches": 0,
+        "maximumDistanceErrorMeters": 1.0876910538915041E-08,
+        "meanDistanceErrorMeters": 1.0876910538915041E-08,
+        "precisionErrorMeters": 2.1753821077830082E-08,
+        "accepted": true
+      }
+    },
+    {
+      "schemaVersion": "0.16.0",
+      "engine": "VAYU",
+      "backend": "VAYU Portable GPU",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "creationFallback": false,
+      "creationMessage": "ready",
+      "rays": 65536,
+      "warmupCount": 2,
+      "iterationCount": 5,
+      "triangles": 2,
+      "nodes": 2,
+      "sceneGpuBytes": 332,
+      "geometryChunks": 1,
+      "uniqueTriangles": 2,
+      "instances": 1,
+      "sceneCacheHit": true,
+      "streamedGeometry": false,
+      "hostSnapshotBytes": 332,
+      "cold": {
+        "totalMilliseconds": 19.257,
+        "uploadMilliseconds": 4.651,
+        "executionMilliseconds": 14.299,
+        "readbackMilliseconds": 0.307
+      },
+      "warm": {
+        "minimumMilliseconds": 3.552,
+        "p50Milliseconds": 3.625,
+        "p95Milliseconds": 3.767,
+        "meanMilliseconds": 3.628,
+        "uploadP50Milliseconds": 2.82,
+        "executionP50Milliseconds": 0.571,
+        "readbackP50Milliseconds": 0.25999999999999995
+      },
+      "cpu": {
+        "p50Milliseconds": 2.096,
+        "millionRaysPerSecond": 31.267175572519083
+      },
+      "backendMillionRaysPerSecond": 18.07889655172414,
+      "runtime": {
+        "traces": 8,
+        "dispatches": 8,
+        "reusableBatches": 8,
+        "runtimeFallbacks": 0,
+        "scratchGenerations": 1,
+        "scratchCapacityRays": 65536,
+        "scratchGpuBytes": 18874432,
+        "uploadedBytes": 25166080,
+        "readbackBytes": 25165824,
+        "geometryUploads": 0,
+        "geometryUploadedBytes": 0,
+        "deviceHealthy": true,
+        "deviceLosses": 0,
+        "executionErrors": 0,
+        "lastError": ""
+      },
+      "parity": {
+        "stateMismatches": 0,
+        "identityMismatches": 0,
+        "maximumDistanceErrorMeters": 1.0876910538915041E-08,
+        "meanDistanceErrorMeters": 1.0876910538915041E-08,
+        "precisionErrorMeters": 2.1753821077830082E-08,
+        "accepted": true
+      }
+    },
+    {
+      "schemaVersion": "0.16.0",
+      "engine": "VAYU",
+      "backend": "VAYU Portable GPU",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "creationFallback": false,
+      "creationMessage": "ready",
+      "rays": 262144,
+      "warmupCount": 2,
+      "iterationCount": 5,
+      "triangles": 2,
+      "nodes": 2,
+      "sceneGpuBytes": 332,
+      "geometryChunks": 1,
+      "uniqueTriangles": 2,
+      "instances": 1,
+      "sceneCacheHit": true,
+      "streamedGeometry": false,
+      "hostSnapshotBytes": 332,
+      "cold": {
+        "totalMilliseconds": 37.101,
+        "uploadMilliseconds": 31.841,
+        "executionMilliseconds": 4.011,
+        "readbackMilliseconds": 1.2489999999999999
+      },
+      "warm": {
+        "minimumMilliseconds": 13.126999999999999,
+        "p50Milliseconds": 13.947,
+        "p95Milliseconds": 14.177,
+        "meanMilliseconds": 13.828,
+        "uploadP50Milliseconds": 10.397,
+        "executionP50Milliseconds": 2.209,
+        "readbackP50Milliseconds": 1.374
+      },
+      "cpu": {
+        "p50Milliseconds": 4.3,
+        "millionRaysPerSecond": 60.96372093023256
+      },
+      "backendMillionRaysPerSecond": 18.795726679572667,
+      "runtime": {
+        "traces": 8,
+        "dispatches": 8,
+        "reusableBatches": 8,
+        "runtimeFallbacks": 0,
+        "scratchGenerations": 1,
+        "scratchCapacityRays": 262144,
+        "scratchGpuBytes": 75497536,
+        "uploadedBytes": 100663552,
+        "readbackBytes": 100663296,
+        "geometryUploads": 0,
+        "geometryUploadedBytes": 0,
+        "deviceHealthy": true,
+        "deviceLosses": 0,
+        "executionErrors": 0,
+        "lastError": ""
+      },
+      "parity": {
+        "stateMismatches": 0,
+        "identityMismatches": 0,
+        "maximumDistanceErrorMeters": 1.0876910538915041E-08,
+        "meanDistanceErrorMeters": 1.0876910538915041E-08,
+        "precisionErrorMeters": 2.1753821077830082E-08,
+        "accepted": true
+      }
+    }
+  ]
+}

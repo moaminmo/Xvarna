@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>راهنمای فارسی ۴۹ کامپوننت XVARNA</title>
+<style>body{font:16px/2 Tahoma,Arial,sans-serif;max-width:1050px;margin:32px auto;padding:0 22px;color:#20313c;background:#fafbf9}h1,h2{color:#12685b;line-height:1.6}h2{margin-top:36px}code,bdi{direction:ltr;unicode-bidi:isolate}code{background:#eaf0ec;padding:2px 5px}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #cfdcd5;text-align:right;vertical-align:top}th{background:#eaf2ed}td:first-child{width:190px}a{color:#12685b}input{box-sizing:border-box;width:100%;font:inherit;padding:12px;border:1px solid #9bbaaa;border-radius:7px;background:white}small{color:#53665b}.count{color:#53665b}@media(max-width:650px){td:first-child{width:125px}td,th{padding:8px;font-size:14px}}@media print{input,.search-label{display:none}body{background:white}tr{break-inside:avoid}}</style>
+<h1>هر کامپوننت XVARNA چه کاری انجام می‌دهد؟</h1>
+<p>این راهنما کاربرد ۴۹ قابلیت را به زبان ساده توضیح می‌دهد. نام‌های انگلیسی ستون اول همان نام‌های قابل‌جست‌وجو در گرس‌هاپر ۱ هستند؛ در گرس‌هاپر ۲ نام نمایشی ممکن است متفاوت باشد، اما کاربرد متناظر است. برای جزئیات هر ورودی، توضیح پورت داخل گرس‌هاپر را بخوان.</p>
+<p><a href="01-install.html">راهنمای نصب و مثال‌ها</a></p>
+<label class="search-label" for="search">جست‌وجو با نام فارسی یا انگلیسی</label><input id="search" type="search" placeholder="مثلاً نور روز، سایه، دید، Scene…"><p class="count" id="count" aria-live="polite">۴۹ کامپوننت</p>
+<h2>تنظیمات و وضعیت اجرا — ۱۰ کامپوننت</h2>
+<table><thead><tr><th>نام</th><th>کاربرد و مثال استفاده</th></tr></thead><tbody>
+<tr data-component><td><bdi>XV Info</bdi></td><td>نسخه و آماده‌بودن موتور را نشان می‌دهد. اولین کامپوننتی است که بعد از نصب می‌گذاری؛ Ready باید True باشد.</td></tr>
+<tr data-component><td><bdi>XV Units</bdi></td><td>واحد مدل و تبدیل آن به متر را مشخص می‌کند تا تحلیل یک مدل میلی‌متری با مدل متری اشتباه نشود.</td></tr>
+<tr data-component><td><bdi>XV Quality</bdi></td><td>پروفایل کیفیت و تنظیمات Basic/Expert را می‌سازد. برای شروع از تنظیم متعادل و برای بررسی دقیق‌تر از نمونه‌برداری بیشتر استفاده کن.</td></tr>
+<tr data-component><td><bdi>XV Devices</bdi></td><td>کارت‌های گرافیک و درایورهای قابل‌استفاده را فهرست می‌کند؛ برای انتخاب GPU سیستم مفید است.</td></tr>
+<tr data-component><td><bdi>XV Backend</bdi></td><td>صحنه را برای اجرای CPU، GPU یا Auto آماده می‌کند. آن را به تحلیل‌هایی که Backend می‌پذیرند وصل کن؛ Auto در صورت نیاز به CPU برمی‌گردد و علت را اعلام می‌کند.</td></tr>
+<tr data-component><td><bdi>XV Runtime</bdi></td><td>وضعیت جلسهٔ محاسباتی، تعداد اجرا، استفادهٔ مجدد از بافر، حافظه و خطا یا برگشت به CPU را نشان می‌دهد.</td></tr>
+<tr data-component><td><bdi>XV Cache</bdi></td><td>حافظهٔ موقت و کش دیسک صحنه را تنظیم و وضعیت استفادهٔ مجدد را نشان می‌دهد. برای کاهش آماده‌سازی تکراری همان صحنه کاربرد دارد.</td></tr>
+<tr data-component><td><bdi>XV Scheduler</bdi></td><td>صف کارهای تحلیلی، پیشرفت و محدودیت اجرای هم‌زمان را نشان می‌دهد و مدیریت می‌کند؛ برای تعریف‌های سنگین مفید است.</td></tr>
+<tr data-component><td><bdi>XV Materials</bdi></td><td>عبور نور مرئی، عبور مستقیم خورشید و بازتاب را به شناسهٔ اشیای صحنه نسبت می‌دهد؛ مثلاً برای مقایسهٔ مانع شفاف و مات در تحلیل دید یا خورشید.</td></tr>
+<tr data-component><td><bdi>XV Diagnostics</bdi></td><td>وضعیت کلی موتور، میزبان و کارهای جاری را جمع‌بندی می‌کند. هنگام خطای بارگذاری یا اجرا از پیام آن برای پیدا کردن علت استفاده کن؛ ساخت فایل گزارش اختیاری است.</td></tr>
+</tbody></table>
+<h2>هندسه و حسگر — ۴ کامپوننت</h2>
+<table><thead><tr><th>نام</th><th>کاربرد و مثال استفاده</th></tr></thead><tbody>
+<tr data-component><td><bdi>XV Mesh Check</bdi></td><td>مش را از نظر خطا، وجه تکراری یا خراب، لبهٔ باز و کیفیت هندسه بررسی می‌کند. Repair محدود، خروجی اصلاح‌شده می‌دهد؛ هندسهٔ اصلی راینو را تغییر نمی‌دهد.</td></tr>
+<tr data-component><td><bdi>XV Scene</bdi></td><td>مش‌ها و نمونه‌های تکراری آن‌ها را به صحنهٔ مشترک تحلیل تبدیل می‌کند. اشیای ثابت و متحرک را مشخص کن تا هنگام تغییر هندسه یا جابه‌جایی، وضعیت به‌روزرسانی دیده شود.</td></tr>
+<tr data-component><td><bdi>XV Ray Query</bdi></td><td>از نقطه‌های شروع در جهت‌های مشخص پرتو می‌فرستد؛ برخورد، فاصله و شناسهٔ مانع را برمی‌گرداند. برای تست مسدود بودن مسیر یا نزدیک‌ترین مانع استفاده می‌شود.</td></tr>
+<tr data-component><td><bdi>XV Sensor Grid</bdi></td><td>روی Mesh، Surface، Brep یا Extrusion نقاط تحلیل با نرمال و مساحت می‌سازد؛ مثلاً شبکهٔ نقاط یک بام برای بررسی تابش.</td></tr>
+</tbody></table>
+<h2>زمان، آفتاب و تابش — ۹ کامپوننت</h2>
+<table><thead><tr><th>نام</th><th>کاربرد و مثال استفاده</th></tr></thead><tbody>
+<tr data-component><td><bdi>XV Period</bdi></td><td>بازهٔ شروع و پایان، گام زمانی و اختلاف ساعت با UTC را به برنامهٔ زمانی تبدیل می‌کند؛ مثلاً ساعات یک روز طراحی. منطقهٔ زمانی را صریح وارد کن.</td></tr>
+<tr data-component><td><bdi>XV Sun Vectors</bdi></td><td>جهت، ارتفاع و آزیموت خورشید را از موقعیت جغرافیایی و زمان می‌سازد. جهت شمال مدل را هم در نظر می‌گیرد.</td></tr>
+<tr data-component><td><bdi>XV Sun Hours</bdi></td><td>ساعت آفتاب مستقیم، سایه و سهم دسترسی خورشیدی نقاط را محاسبه می‌کند و مانع غالب را نشان می‌دهد؛ برای سایت، نما و سایبان کاربرد دارد.</td></tr>
+<tr data-component><td><bdi>XV Sky View</bdi></td><td>میزان آسمان قابل‌دید از هر حسگر را محاسبه می‌کند و اطلاعات موانع را نگه می‌دارد؛ برای مقایسهٔ بازبودن حیاط یا میان ساختمان‌ها مفید است.</td></tr>
+<tr data-component><td><bdi>XV Shadow Mask</bdi></td><td>از نتیجهٔ Sky View، جهت‌های باز و مسدود یک حسگر را نمایش می‌دهد؛ کمک می‌کند بفهمی کدام بخش آسمان را چه مانعی پوشانده است.</td></tr>
+<tr data-component><td><bdi>XV Irradiance</bdi></td><td>با فایل EPW و صحنه، تابش مستقیم، پخشیده و بازتاب زمین را روی حسگرها محاسبه می‌کند؛ برای نقشهٔ تابش بام و نما. انرژی تابشی با واحد kWh/m² و شدت اوج با W/m² گزارش می‌شود.</td></tr>
+<tr data-component><td><bdi>XV Solar Potential</bdi></td><td>شبکهٔ حسگر و نتیجهٔ تابش را به نقشهٔ رنگی، نواحی مناسب و برآورد اولیهٔ پتانسیل پنل خورشیدی تبدیل می‌کند. بازده و پوشش پنل جزو فرض‌های ورودی هستند.</td></tr>
+<tr data-component><td><bdi>XV Solar Envelope</bdi></td><td>با نقاط حفاظت‌شده و جهت خورشید، فاصله‌های راهنما برای حفظ آفتاب یا ایجاد سایه را روی محورهای انتخابی می‌یابد؛ برای مطالعهٔ اولیهٔ حجم و سایبان، نه تعیین ضابطهٔ قانونی ساخت.</td></tr>
+<tr data-component><td><bdi>XV Solar Scenarios</bdi></td><td>چند گزینهٔ مصالح را روی هندسه و برنامهٔ خورشیدی یکسان مقایسه می‌کند؛ مثلاً اثر تغییر عبور نور سایبان بر ساعت دریافت آفتاب و سهم موانع.</td></tr>
+</tbody></table>
+<h2>نور روز — ۵ کامپوننت</h2>
+<table><thead><tr><th>نام</th><th>کاربرد و مثال استفاده</th></tr></thead><tbody>
+<tr data-component><td><bdi>XV Optical</bdi></td><td>کتابخانهٔ مواد نوری RGB با عبور و بازتاب را برای نور روز و خروجی Radiance می‌سازد؛ مثلاً تعریف شیشه و سطوح داخلی.</td></tr>
+<tr data-component><td><bdi>XV Daylight</bdi></td><td>روشنایی مستقیم، پخشیده و کل یک لحظه را با واحد lux و ضریب نور روز را برای آسمان ابری محاسبه می‌کند. برای بررسی سریع نقاط کار استفاده می‌شود.</td></tr>
+<tr data-component><td><bdi>XV Annual Daylight</bdi></td><td>با EPW، زمان اشغال و حسگرها شاخص‌های سالانهٔ sDA، ASE و UDI می‌سازد؛ برای بررسی دریافت کافی نور، مواجهه با آفتاب مستقیم و بازه‌های روشنایی مفید است.</td></tr>
+<tr data-component><td><bdi>XV Radiance</bdi></td><td>هندسه، مواد و حسگرهای صحنه را به فایل‌های ورودی Radiance صادر می‌کند. خود این کامپوننت export است؛ اجرای مرجع به ابزار جداگانه نیاز دارد.</td></tr>
+<tr data-component><td><bdi>XV Daylight Δ</bdi></td><td>دو مجموعهٔ روشنایی هم‌تراز از تحلیل سریع و مرجع را مقایسه می‌کند و خطا و پذیرش نسبت به تلرانس را نشان می‌دهد. نقاط و ترتیب آن‌ها باید یکسان باشند.</td></tr>
+</tbody></table>
+<p><small>مسیر سریع نور روز بازتاب‌های چندمرحله‌ای را مدل نمی‌کند. برای فضاهایی که بازتاب داخلی تعیین‌کننده است، نتیجهٔ مرجع را جداگانه بررسی کن.</small></p>
+<h2>دید، فضا و حریم خصوصی — ۱۰ کامپوننت</h2>
+<table><thead><tr><th>نام</th><th>کاربرد و مثال استفاده</th></tr></thead><tbody>
+<tr data-component><td><bdi>XV Isovist</bdi></td><td>محدودهٔ دید دوبعدی از نقاط ناظر را به‌صورت چندخطی همراه مساحت، محیط و عمق دید می‌دهد؛ برای مقایسهٔ پلان و مسیر حرکت.</td></tr>
+<tr data-component><td><bdi>XV Isovist 3D</bdi></td><td>دید پیرامونی سه‌بعدی، بازبودن و حجم شعاعی را نمونه‌برداری می‌کند؛ سهم موانع و دسته‌ها و اثر حذف تک‌مانع را نیز بررسی می‌کند.</td></tr>
+<tr data-component><td><bdi>XV Target View</bdi></td><td>دید به مش‌های هدف را با زاویهٔ فضایی محاسبه می‌کند و خروجی‌های Target View، دید وزنی و سهم اهداف سبز را می‌دهد؛ مثلاً منظر پارک از پنجره. سبز بودن را با دسته‌بندی هدف تعیین می‌کنی.</td></tr>
+<tr data-component><td><bdi>XV Intervisibility</bdi></td><td>دید هر ناظر به هر هدف و شاخص هندسی حریم خصوصی را بررسی می‌کند؛ مثلاً رابطهٔ دید پنجره‌های دو ساختمان. این شاخص، احتمال واقعی رفتار افراد نیست.</td></tr>
+<tr data-component><td><bdi>XV Visibility Graph</bdi></td><td>بین نقاطی که همدیگر را می‌بینند شبکه می‌سازد و اتصال و شاخص‌های شبکه را گزارش می‌کند؛ برای مطالعهٔ ارتباط بصری فضاها.</td></tr>
+<tr data-component><td><bdi>XV Landmark</bdi></td><td>دیده‌شدن جزئی یا کامل نشانه‌های تعریف‌شده را در میدان دید دوربین بررسی می‌کند؛ مثلاً میزان مشاهدهٔ یک برج یا ورودی شاخص.</td></tr>
+<tr data-component><td><bdi>XV Corridor</bdi></td><td>باز یا مسدود بودن مسیر دید به دهانهٔ هدف را می‌سنجد و مانع غالب را معرفی می‌کند؛ برای حفظ کریدور دید به یک نشانه.</td></tr>
+<tr data-component><td><bdi>XV View Path</bdi></td><td>دید به اهداف را در امتداد مسیر ناظر نمونه‌برداری می‌کند؛ نقاط بهترین و ضعیف‌ترین دید و میانگین‌های مسیر را به دست می‌دهد.</td></tr>
+<tr data-component><td><bdi>XV Highlight</bdi></td><td>با استفاده از شناسه‌های موانع و مش‌های منبع، اشیای مؤثر را در viewport برجسته می‌کند؛ برای پیدا کردن ساختمان یا سایبان مسئول انسداد.</td></tr>
+<tr data-component><td><bdi>XV Compare</bdi></td><td>دو نتیجهٔ Isovist 3D با ناظرهای یکسان را مقایسه می‌کند؛ اختلاف حجم، بازبودن و سهم انسداد را به‌صورت گزینه منهای مبنا می‌دهد.</td></tr>
+</tbody></table>
+<h2>مطالعه، بهینه‌سازی و گزارش — ۱۰ کامپوننت</h2>
+<table><thead><tr><th>نام</th><th>کاربرد و مثال استفاده</th></tr></thead><tbody>
+<tr data-component><td><bdi>XV Study</bdi></td><td>گزینه‌هایی را که قبلاً تحلیل کرده‌ای با هدف‌ها و محدودیت‌ها رتبه‌بندی می‌کند؛ جبههٔ پارتو کمک می‌کند سازش بین نور، دید و دیگر معیارها را ببینی.</td></tr>
+<tr data-component><td><bdi>XV Optimizer</bdi></td><td>بهینه‌سازی را با متغیرها و تنظیمات مشخص شروع می‌کند و دستهٔ اولیهٔ گزینه‌ها را می‌دهد. مقدار هدف هر گزینه را باید در تعریف خودت محاسبه کنی.</td></tr>
+<tr data-component><td><bdi>XV Opt Step</bdi></td><td>نتایج گزینه‌های فعلی را به بهینه‌ساز بازمی‌گرداند و نسل بعد را می‌سازد؛ ورودی Advance را برای هر نسل یک بار فعال کن.</td></tr>
+<tr data-component><td><bdi>XV Manifest</bdi></td><td>تعریف مطالعه شامل نام و نوع متغیرها، هدف‌ها، محدودیت‌ها و گزینهٔ مبنا را ثبت می‌کند؛ نقطهٔ شروع مطالعهٔ ذخیره‌شدنی.</td></tr>
+<tr data-component><td><bdi>XV Workspace</bdi></td><td>پوشهٔ مطالعه را ایجاد یا باز می‌کند و دستهٔ بعدی یا دستهٔ ناتمام قبلی را می‌دهد؛ برای ادامه دادن کار پس از بستن برنامه.</td></tr>
+<tr data-component><td><bdi>XV Commit</bdi></td><td>نتایج کامل و هم‌تراز گزینه‌ها را در Workspace ثبت می‌کند. شناسهٔ گزینه، شاخه‌های داده و ترتیب هدف‌ها باید با مطالعه تطبیق داشته باشند.</td></tr>
+<tr data-component><td><bdi>XV Report</bdi></td><td>مطالعهٔ ذخیره‌شده را به گزارش HTML و نمایشگر مستقل همراه داده‌های JSON، Parquet و glTF تبدیل می‌کند؛ برای ارسال نتیجه به استاد یا همکار.</td></tr>
+<tr data-component><td><bdi>XV Evidence</bdi></td><td>شناسنامهٔ نتیجه شامل ورودی، روش، کیفیت، نسخه و فرض‌ها را ثبت می‌کند؛ برای اینکه بعداً بدانی یک نتیجه چگونه تولید شده است.</td></tr>
+<tr data-component><td><bdi>XV Sensitivity+</bdi></td><td>طرح آزمایش حساسیت Saltelli/Jansen یا Morris می‌سازد و نتایج هم‌تراز را تحلیل می‌کند؛ برای یافتن متغیرهای مؤثرتر. همهٔ نمونه‌های لازم را ابتدا باید ارزیابی کنی.</td></tr>
+<tr data-component><td><bdi>XV Fidelity</bdi></td><td>با استفاده از داده‌های سریع و مرجع، گزینه‌های مناسب برای محاسبهٔ مرجع پرهزینه‌تر را پیشنهاد می‌دهد؛ برای مدیریت هزینهٔ محاسبه در مطالعه.</td></tr>
+</tbody></table>
+<h2>نمایش — ۱ کامپوننت</h2>
+<table><thead><tr><th>نام</th><th>کاربرد و مثال استفاده</th></tr></thead><tbody>
+<tr data-component><td><bdi>XV Legend</bdi></td><td>راهنمای رنگ و بازهٔ عددی نقشه را می‌سازد؛ کنار heatmap قرار بده تا معنی رنگ‌ها و واحد تحلیل برای بیننده روشن باشد.</td></tr>
+</tbody></table>
+<p>برای شروع لازم نیست همهٔ کامپوننت‌ها را استفاده کنی: یک صحنه، حسگر یا ناظر مناسب و یک تحلیل کافی است. بخش Study و بهینه‌سازی را بعد از درست کار کردن همان تحلیل امتحان کن.</p>
+<script>const rows=[...document.querySelectorAll('[data-component]')];const norm=s=>s.toLowerCase().replace(/ي/g,'ی').replace(/ك/g,'ک');document.querySelector('#search').addEventListener('input',e=>{let n=0;const q=norm(e.target.value.trim());for(const row of rows){row.hidden=!norm(row.textContent).includes(q);if(!row.hidden)n++;}document.querySelector('#count').textContent=n.toLocaleString('fa-IR')+' کامپوننت';});</script>
+</html>

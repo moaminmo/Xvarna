@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xvarna.org/schemas/global-sensitivity-design.schema.json",
+  "title": "XVARNA RASHNU Global Sensitivity Design",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "method", "variables", "baseSamples", "levels", "seed", "rows", "contentHash"],
+  "properties": {
+    "schemaVersion": { "const": "xvarna.global-sensitivity-design/1" },
+    "method": { "enum": ["saltelliJansen", "morris"] },
+    "variables": { "type": "array", "minItems": 1, "maxItems": 256, "items": { "$ref": "#/$defs/variable" } },
+    "baseSamples": { "type": "integer", "minimum": 1 },
+    "levels": { "type": "integer", "minimum": 0 },
+    "seed": { "type": "integer", "minimum": 0 },
+    "rows": { "type": "array", "minItems": 1, "maxItems": 2000000, "items": { "$ref": "#/$defs/row" } },
+    "contentHash": { "type": "string", "minLength": 64, "maxLength": 64 }
+  },
+  "$defs": {
+    "variable": {
+      "type": "object", "additionalProperties": false,
+      "required": ["variableId", "kind", "lowerBound", "upperBound"],
+      "properties": {
+        "variableId": { "type": "integer", "minimum": 1 },
+        "kind": { "enum": ["continuous", "integer", "categorical"] },
+        "lowerBound": { "type": "number" },
+        "upperBound": { "type": "number" }
+      }
+    },
+    "row": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rowIndex", "values"],
+      "properties": {
+        "rowIndex": { "type": "integer", "minimum": 0 },
+        "values": { "type": "array", "minItems": 1, "items": { "type": "number" } },
+        "trajectory": { "type": ["integer", "null"], "minimum": 0 },
+        "changedParameter": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    }
+  }
+}

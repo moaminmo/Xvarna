@@ -1,0 +1,17 @@
+[package]
+name = "xvarna-io"
+description = "Auditable mesh import and export for XVARNA."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[dependencies]
+serde_json.workspace = true
+xvarna-geometry = { path = "../xvarna-geometry" }
+
+[lints]
+workspace = true

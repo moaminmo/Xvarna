@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <AssemblyName>Xvarna.Grasshopper</AssemblyName>
+    <RootNamespace>Xvarna.Grasshopper</RootNamespace>
+    <TargetExt>.gha</TargetExt>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="Grasshopper" VersionOverride="8.21.25188.17001" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="Grasshopper" VersionOverride="9.0.26237.15343-beta" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xvarna.Native\Xvarna.Native.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="Exists('..\..\artifacts\native\win-x64\xvarna_core.dll')">
+    <None Include="..\..\artifacts\native\win-x64\xvarna_core.dll"
+          Link="xvarna_core.dll"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+<ItemGroup><EmbeddedResource Include="../../assets/icons/*.png" LogicalName="Xvarna.Icons.%(Filename)%(Extension)" /></ItemGroup>
+</Project>

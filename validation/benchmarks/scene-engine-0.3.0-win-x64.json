@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.3.0",
+  "capturedAt": "2026-08-31",
+  "product": "XVARNA ZAMYAD Scene Engine",
+  "build": "release-x86_64-pc-windows-msvc",
+  "host": {
+    "cpu": "Intel(R) Core(TM) i7-14650HX",
+    "physicalCores": 16,
+    "logicalProcessors": 24,
+    "os": "Microsoft Windows 11 Home",
+    "osVersion": "10.0.26200",
+    "architecture": "x64"
+  },
+  "fixture": "validation/meshes/tetrahedron.obj",
+  "scene": {
+    "hash": "4623c51a2ea887d20bc70506ae0ad8c71bda6741f5268d3010d38f90265602f2",
+    "resources": 1,
+    "instances": 1,
+    "uniqueTriangles": 4,
+    "instancedTriangles": 4,
+    "blasNodes": 1,
+    "tlasNodes": 1,
+    "maximumDepth": 0,
+    "approximateMemoryBytes": 904,
+    "buildMicroseconds": 502,
+    "workers": 24
+  },
+  "query": {
+    "rays": 1000000,
+    "hits": 500500,
+    "microseconds": 19620,
+    "raysPerSecond": 50967100.73647461
+  },
+  "differentialValidation": {
+    "referenceRays": 2048,
+    "mismatches": 0,
+    "referenceMicroseconds": 186
+  },
+  "limitations": [
+    "Single cold-process run; not a distribution or cross-product comparison.",
+    "The four-triangle analytic fixture measures traversal and batching overhead, not performance on a production architectural model.",
+    "Interactive Rhino 9 runtime validation was not possible because Rhino 9 was not installed on this host."
+  ],
+  "reproduce": "artifacts/cli/win-x64/xvarna.exe scene-bench validation/meshes/tetrahedron.obj --rays 1000000 --json"
+}

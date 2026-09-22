@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-contracts:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: python tools/check_icons.py
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.96.0
+          components: clippy, rustfmt
+          targets: x86_64-pc-windows-msvc
+
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Restore managed dependencies
+        run: dotnet restore Xvarna.sln
+
+      - name: Check Rust formatting
+        run: cargo fmt --all -- --check
+
+      - name: Lint Rust
+        run: cargo clippy --workspace --all-targets --target x86_64-pc-windows-msvc -- -D warnings
+
+      - name: Test Rust
+        run: cargo test --workspace --target x86_64-pc-windows-msvc
+
+      - name: Build native engine
+        shell: pwsh
+        run: ./eng/build-native.ps1 -Configuration Release
+
+      - name: Build standalone CLI
+        shell: pwsh
+        run: ./eng/build-cli.ps1 -Configuration Release
+
+      - name: Validate core, time, and interoperability round trips
+        shell: pwsh
+        run: ./eng/validate-core-interop.ps1 -Cli ./artifacts/cli/win-x64/xvarna.exe
+
+      - name: Build Rhino 8 and Rhino 9 connectors
+        run: dotnet build Xvarna.sln --configuration Release --no-restore
+
+      - name: Test managed contracts
+        run: dotnet test dotnet/Xvarna.Tests/Xvarna.Tests.csproj --configuration Release --no-build
+
+      - name: Gate deterministic soak, malformed corpus, and managed coverage
+        shell: pwsh
+        run: ./eng/release-quality.ps1 -Cli ./artifacts/cli/win-x64/xvarna.exe -Iterations 4 -MutationCount 12 -CollectManagedCoverage -CoverageConfiguration Release -MinimumManagedLineRate 0.85
+
+      - name: Verify managed formatting
+        run: dotnet format Xvarna.sln --verify-no-changes --no-restore --verbosity minimal
+
+      - name: Smoke-test analytic CLI corpus
+        shell: pwsh
+        run: |
+          ./artifacts/cli/win-x64/xvarna.exe mesh-check validation/meshes/tetrahedron.obj --json
+          ./artifacts/cli/win-x64/xvarna.exe mesh-repair validation/meshes/broken_mesh.obj "$env:RUNNER_TEMP/repaired.obj"
+          ./artifacts/cli/win-x64/xvarna.exe mesh-check "$env:RUNNER_TEMP/repaired.obj" --json

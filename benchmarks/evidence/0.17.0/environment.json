@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "capturedUtc": "2026-09-03T17:05:38.2990841+00:00",
+  "sourceCommit": "355916f26fe69507e8d15f352bba49ee1b0bd3f0",
+  "sourceDirty": false,
+  "operatingSystem": "Microsoft Windows 11 Home 10.0.26200",
+  "processor": "Intel(R) Core(TM) i7-14650HX",
+  "logicalProcessors": 24,
+  "memoryBytes": 16763248640,
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+  "dotnet": "10.0.300",
+  "rayCounts": [
+    4096,
+    65536,
+    262144
+  ],
+  "warmupCount": 2,
+  "iterationCount": 5,
+  "adapters": [
+    {
+      "name": "Intel(R) RaptorLake-S Mobile Graphics Controller",
+      "driver": "Intel Corporation",
+      "driverInfo": "101.7076",
+      "backend": "Vulkan",
+      "deviceType": "IntegratedGpu",
+      "vendorId": 32902,
+      "deviceId": 42891
+    },
+    {
+      "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "driver": "NVIDIA",
+      "driverInfo": "591.91",
+      "backend": "Vulkan",
+      "deviceType": "DiscreteGpu",
+      "vendorId": 4318,
+      "deviceId": 11609
+    },
+    {
+      "name": "Intel(R) UHD Graphics",
+      "driver": "32.0.101.7076",
+      "driverInfo": "",
+      "backend": "Dx12",
+      "deviceType": "IntegratedGpu",
+      "vendorId": 32902,
+      "deviceId": 42891
+    },
+    {
+      "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "driver": "32.0.15.9191",
+      "driverInfo": "",
+      "backend": "Dx12",
+      "deviceType": "DiscreteGpu",
+      "vendorId": 4318,
+      "deviceId": 11609
+    },
+    {
+      "name": "Microsoft Basic Render Driver",
+      "driver": "10.0.26100.9278",
+      "driverInfo": "",
+      "backend": "Dx12",
+      "deviceType": "Cpu",
+      "vendorId": 5140,
+      "deviceId": 140
+    },
+    {
+      "name": "Intel(R) RaptorLake-S Mobile Graphics Controller",
+      "driver": "",
+      "driverInfo": "4.6.0 - Build 32.0.101.7076",
+      "backend": "Gl",
+      "deviceType": "IntegratedGpu",
+      "vendorId": 32902,
+      "deviceId": 0
+    }
+  ]
+}

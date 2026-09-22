@@ -1,0 +1,29 @@
+[package]
+name = "xvarna-ffi"
+description = "Stable C ABI for the XVARNA native engine."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[lib]
+name = "xvarna_core"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+xvarna-daena = { path = "../xvarna-daena" }
+xvarna-geometry = { path = "../xvarna-geometry" }
+xvarna-hvare = { path = "../xvarna-hvare" }
+xvarna-scene = { path = "../xvarna-scene" }
+xvarna-study = { path = "../xvarna-study" }
+xvarna-vayu = { path = "../xvarna-vayu" }
+xvarna-types = { path = "../xvarna-types" }
+xvarna-zurvan = { path = "../xvarna-zurvan" }
+
+[lints]
+workspace = true

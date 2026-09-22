@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "0.16.0",
+  "studyId": "courtyard-ultra-study",
+  "title": "Courtyard daylight, view and energy search",
+  "description": "End-to-end validation fixture for XVARNA VAHMAN 0.16.",
+  "createdUtc": "2026-09-02T12:00:00Z",
+  "engineVersion": "0.16.0",
+  "parameters": [
+    {
+      "parameterId": 1,
+      "name": "courtyardDepth",
+      "kind": "continuous",
+      "lowerBound": 0.2,
+      "upperBound": 1.0,
+      "unit": "ratio",
+      "categories": []
+    },
+    {
+      "parameterId": 2,
+      "name": "floorCount",
+      "kind": "integer",
+      "lowerBound": 2,
+      "upperBound": 8,
+      "unit": "floors",
+      "categories": []
+    },
+    {
+      "parameterId": 3,
+      "name": "facadeSystem",
+      "kind": "categorical",
+      "lowerBound": 0,
+      "upperBound": 2,
+      "unit": "",
+      "categories": ["clear", "frit", "shaded"]
+    }
+  ],
+  "objectives": [
+    {
+      "objectiveId": 1,
+      "name": "visualQuality",
+      "direction": "maximize",
+      "unit": "%",
+      "components": ["sDA", "greenView"]
+    },
+    {
+      "objectiveId": 2,
+      "name": "energyUse",
+      "direction": "minimize",
+      "unit": "kWh/m2",
+      "components": []
+    }
+  ],
+  "constraints": [
+    {
+      "constraintId": 1,
+      "name": "maximumDepth",
+      "unit": "ratio"
+    }
+  ],
+  "baselineVariantId": 1,
+  "optimizer": {
+    "populationSize": 4,
+    "offspringSize": 4,
+    "archiveCapacity": 16,
+    "seed": 1701,
+    "crossoverProbability": 0.9,
+    "mutationProbability": 0.0,
+    "crossoverDistributionIndex": 15.0,
+    "mutationDistributionIndex": 20.0
+  },
+  "metadata": {
+    "author": "XVARNA validation",
+    "discipline": "computational architecture"
+  }
+}

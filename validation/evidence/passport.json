@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "xvarna.evidence-passport/1",
+  "resultHash": "analytic-additive-result",
+  "sceneHash": "analytic-unit-square",
+  "studyId": "xvarna-0.18-validation",
+  "variantId": 1,
+  "method": "Saltelli first-order and Jansen total-order analytic validation",
+  "fidelity": "reference",
+  "engineVersion": "0.19.0",
+  "backend": "analytic",
+  "device": "deterministic Rust reference kernel",
+  "driver": "none",
+  "generatedUtc": "2026-09-04T00:00:00Z",
+  "seed": 42,
+  "sampleCount": 4096,
+  "convergenceDelta": 0.06,
+  "elapsedMicroseconds": 0,
+  "inputHashes": { "variables": "validation/evidence/variables.json" },
+  "assumptions": ["Independent uniform inputs", "Additive model y = x1 + 2*x2"],
+  "limitations": ["Analytic kernel validation is not external-project evidence"],
+  "citations": ["Saltelli et al. 2010", "JRC Morris handbook"],
+  "validation": {
+    "parityTested": false,
+    "maximumParityDelta": null,
+    "referenceTested": true,
+    "referenceMethod": "closed-form additive Sobol indices",
+    "maximumReferenceError": 0.06,
+    "acceptedFraction": 1.0
+  },
+  "contentHash": ""
+}

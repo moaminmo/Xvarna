@@ -1,0 +1,52 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/xvarna-cache",
+  "crates/xvarna-types",
+  "crates/xvarna-geometry",
+  "crates/xvarna-io",
+  "crates/xvarna-scene",
+  "crates/xvarna-vayu",
+  "crates/xvarna-daena",
+  "crates/xvarna-study",
+  "crates/xvarna-zurvan",
+  "crates/xvarna-hvare",
+  "crates/xvarna-ffi",
+  "crates/xvarna-cli",
+]
+
+[workspace.package]
+version = "0.19.0"
+edition = "2024"
+rust-version = "1.96.0"
+authors = ["XVARNA contributors"]
+license = "Apache-2.0"
+repository = "https://github.com/moaminmo/Xvarna"
+homepage = "https://github.com/moaminmo/Xvarna"
+readme = "README.md"
+
+[workspace.dependencies]
+blake3 = "1.8.7"
+chrono = { version = "=0.4.45", default-features = false, features = ["std"] }
+rayon = "1.12.0"
+solar-positioning = "=0.5.3"
+bytemuck = { version = "1.25.2", features = ["derive"] }
+pollster = "1.0.1"
+wgpu = "30.0.1"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = { version = "1.0.151", features = ["float_roundtrip"] }
+arrow-array = "59.3.0"
+arrow-schema = "59.3.0"
+parquet = { version = "59.3.0", default-features = false, features = ["arrow", "snap"] }
+
+[workspace.lints.rust]
+missing_docs = "warn"
+unsafe_op_in_unsafe_fn = "deny"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"

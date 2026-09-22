@@ -1,0 +1,4 @@
+[
+  { "variableId": 1, "kind": "continuous", "lowerBound": 0.0, "upperBound": 1.0 },
+  { "variableId": 2, "kind": "continuous", "lowerBound": 0.0, "upperBound": 1.0 }
+]

@@ -1,0 +1,2 @@
+{"schemaVersion":"1.0.0","id":"urban-visibility","status":"PROTOCOL_READY_MODEL_PENDING","units":"metres","workflow":"03-daena-view-analysis.ghx","requiredOutputs":["evidence-passport.json","attribution.json","report.html"],"model":{"source":null,"license":null,"sha256":null},"limitations":["Visibility/privacy are geometric screening metrics, not human-subject measurements"]}
+

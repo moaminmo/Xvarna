@@ -1,0 +1,43 @@
+[
+  {
+    "check": "Xvarna_clippy",
+    "exit_code": 0,
+    "rust_test_count": null,
+    "result_lines": []
+  },
+  {
+    "check": "Xvarna_managed_tests",
+    "exit_code": 0,
+    "rust_test_count": null,
+    "result_lines": [
+      "Passed!  - Failed:     0, Passed:    88, Skipped:     0, Total:    88, Duration: 4 s - Xvarna.Tests.dll (net10.0)",
+      "Passed!  - Failed:     0, Passed:    88, Skipped:     0, Total:    88, Duration: 4 s - Xvarna.Tests.dll (net8.0)"
+    ]
+  },
+  {
+    "check": "Xvarna_native_build",
+    "exit_code": 0,
+    "rust_test_count": null,
+    "result_lines": []
+  },
+  {
+    "check": "Xvarna_tests",
+    "exit_code": 0,
+    "rust_test_count": 180,
+    "result_lines": [
+      "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+      "test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+      "test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+      "test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.99s",
+      "test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+      "test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s",
+      "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+      "test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+      "test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s",
+      "test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s",
+      "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+      "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.96s",
+      "test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "READY_FOR_EXTERNAL_COLLECTION",
+  "candidate": "1.0.0-rc.1",
+  "sessions": 0,
+  "uniqueTesters": 0,
+  "successfulProjects": 0,
+  "crashFreeSessionsPercent": null,
+  "unaidedInstallSuccessPercent": null,
+  "medianMinutesToFirstAnalysis": null,
+  "openIssues": { "S0": 0, "S1": 0, "S2": 0, "S3": 0, "P0": 0 },
+  "targets": { "uniqueTesters": 20, "successfulProjects": 10, "crashFreeSessionsPercent": 99.5, "unaidedInstallSuccessPercent": 95.0, "medianMinutesToFirstAnalysisMaximum": 15.0 },
+  "decision": "PENDING_EXTERNAL_BETA"
+}
+

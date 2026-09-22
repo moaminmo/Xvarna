@@ -1,0 +1,21 @@
+[package]
+name = "xvarna-scene"
+description = "Canonical scene snapshots and CPU acceleration for XVARNA."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[dependencies]
+blake3.workspace = true
+rayon.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+xvarna-geometry = { path = "../xvarna-geometry" }
+xvarna-types = { path = "../xvarna-types" }
+
+[lints]
+workspace = true

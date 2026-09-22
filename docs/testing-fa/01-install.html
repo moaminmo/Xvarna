@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>نصب و شروع تست XVARNA</title>
+<style>body{font:17px/2 Tahoma,Arial,sans-serif;max-width:850px;margin:35px auto;padding:0 24px;color:#20313c;background:#fafbf9}h1,h2{color:#12685b;line-height:1.6}code,bdi{direction:ltr;unicode-bidi:isolate}code{background:#eaf0ec;padding:2px 7px;border-radius:4px}li{margin:10px 0}aside{padding:15px 20px;background:#eaf2ed;border-right:4px solid #12685b}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid #ccd9d2;padding:9px;text-align:right}a{color:#12685b}@media print{body{background:white}}</style>
+<h1>XVARNA — راهنمای نصب و تست</h1>
+<p>نسخهٔ تست <bdi>1.0.0-rc.1</bdi> برای ویندوز ۶۴ بیتی. برای شروع فقط راینو و گرس‌هاپر لازم است؛ نصب Rust، Python یا ابزارهای برنامه‌نویسی لازم نیست.</p>
+<h2>۱. نصب پلاگین در گرس‌هاپر ۱</h2>
+<ol>
+<li>روی فایل ZIP دریافتی راست‌کلیک کن، <bdi>Properties</bdi> را باز کن و اگر گزینهٔ <bdi>Unblock</bdi> وجود دارد آن را فعال و <bdi>Apply</bdi> کن. سپس ZIP را کامل با <bdi>Extract All</bdi> در یک پوشهٔ ثابت استخراج کن. فایل را از داخل ZIP اجرا نکن.</li>
+<li>اگر راینو ۸ داری، پوشهٔ <code>Plugin/Rhino8</code> را انتخاب کن. اگر راینو ۹ داری، پوشهٔ <code>Plugin/Rhino9</code> را انتخاب کن. فقط پوشهٔ مربوط به نسخهٔ راینو خودت را معرفی کن.</li>
+<li>در راینو گرس‌هاپر را باز کن. در خط فرمان راینو دستور <code>GrasshopperDeveloperSettings</code> را اجرا کن و پوشهٔ انتخاب‌شده را به فهرست مسیرهای کتابخانهٔ گرس‌هاپر اضافه کن.</li>
+<li>راینو را کامل ببند و دوباره باز کن. در گرس‌هاپر تب <code>XVARNA</code> را پیدا کن. در بخش <code>00 Setup</code> کامپوننت <code>XV Info</code> را روی بوم بگذار؛ خروجی <code>Ready</code> باید <code>True</code> باشد.</li>
+</ol>
+<aside>سه فایل <code>Xvarna.Grasshopper.gha</code>، <code>Xvarna.Native.dll</code> و <code>xvarna_core.dll</code> باید همیشه کنار هم بمانند. اگر نسخهٔ قدیمی XVARNA نصب کرده‌ای، مسیر آن را از کتابخانه خارج کن تا دو نسخه هم‌زمان بارگذاری نشوند. این بسته برای راینو ۸٫۲۰ به بعد با runtime دات‌نت ۸، و راینو ۹ با دات‌نت ۱۰ ساخته شده است.</aside>
+<h2>۲. باز کردن مثال‌ها</h2>
+<p>در گرس‌هاپر ۱ از <bdi>File → Open</bdi> یکی از فایل‌های پوشهٔ <code>Examples</code> را باز کن. برای شروع <code>01-xvarna-preflight.ghx</code> مناسب است.</p>
+<p><strong>مثال‌ها قالب آموزشی با کامپوننت‌های چیده‌شده و پنل توضیح هستند؛ سیم‌کشی، هندسه و همهٔ ورودی‌ها از پیش آماده نیستند.</strong> باید ورودی‌ها را وصل کنی. بنابراین نارنجی بودن کامپوننتی که هنوز ورودی ندارد، به‌تنهایی نشانهٔ خرابی پلاگین نیست.</p>
+<p>برای یک تست ساده: در راینو یک <bdi>Mesh</bdi> بساز؛ آن را با پارامتر Mesh گرس‌هاپر به ورودی هندسهٔ <code>XV Scene</code> وصل کن. خروجی Scene را به <code>XV Ray Query</code> بده و یک نقطهٔ شروع و بردار به سمت مش تعیین کن. با تغییر نقطه یا جهت، برخورد و فاصله را بررسی کن. برای دیدن معنی ورودی و خروجی‌ها، نشانگر ماوس را روی پورت نگه دار.</p>
+<table><thead><tr><th>فایل مثال</th><th>موضوع</th></tr></thead><tbody>
+<tr><td><bdi>01-xvarna-preflight.ghx</bdi></td><td>شناخت موتور، واحد، کیفیت و وضعیت اجرا</td></tr>
+<tr><td><bdi>02-vayu-scene-visibility.ghx</bdi></td><td>ساخت صحنه، CPU/GPU و تحلیل دید</td></tr>
+<tr><td><bdi>03-hvare-daylight-solar.ghx</bdi></td><td>نور روز، مواد نوری و سناریوهای خورشیدی</td></tr>
+<tr><td><bdi>04-vahman-study-report.ghx</bdi></td><td>مطالعه، بهینه‌سازی و گزارش</td></tr>
+<tr><td><bdi>05-rashnu-evidence-multifidelity.ghx</bdi></td><td>حساسیت و انتخاب تحلیل مرجع</td></tr>
+<tr><td><bdi>06-urban-sun-hours.ghx</bdi></td><td>ساعت آفتاب سایت و شناسایی مانع</td></tr>
+<tr><td><bdi>07-parametric-shade-delta.ghx</bdi></td><td>تغییر سایبان و به‌روزرسانی صحنه</td></tr>
+<tr><td><bdi>08-target-weighted-green-view.ghx</bdi></td><td>دید به هدف، کیفیت وزنی و سهم فضای سبز</td></tr>
+<tr><td><bdi>09-facade-privacy.ghx</bdi></td><td>دید متقابل و حریم خصوصی نما</td></tr>
+<tr><td><bdi>10-annual-daylight-reference.ghx</bdi></td><td>نور روز سالانه و مسیر مرجع</td></tr>
+<tr><td><bdi>11-dynamic-observer-corridor.ghx</bdi></td><td>حرکت ناظر، کریدور دید و دید سه‌بعدی</td></tr>
+<tr><td><bdi>12-end-to-end-decision-report.ghx</bdi></td><td>اتصال مطالعه، مقایسه و گزارش تصمیم</td></tr>
+</tbody></table>
+<h2>۳. اگر گرس‌هاپر ۲ را تست می‌کنی</h2>
+<p>در راینو ۹، دستور <code>PlugInManager</code> را اجرا کن؛ از <bdi>Install</bdi> فایل <code>Plugin/Rhino9/Xvarna.Grasshopper2.rhp</code> را معرفی و راینو را دوباره باز کن. فایل‌های DLL همان پوشه را جابه‌جا نکن. سپس گرس‌هاپر ۲ را باز و کامپوننت‌های XVARNA را جست‌وجو کن.</p>
+<p>این اتصال با SDK پیش‌انتشار <bdi>9.0.26237.15343-beta</bdi> ساخته شده و نسخهٔ WIP میزبان می‌تواند روی بارگذاری اثر بگذارد. فایل‌های <code>.ghx</code> این بسته برای گرس‌هاپر ۱ هستند؛ مثال بومی ذخیره‌شدهٔ گرس‌هاپر ۲ در این بسته وجود ندارد و برای تست آن باید کامپوننت‌ها را روی بوم خودش بچینی.</p>
+<h2>۴. موارد کاربردی هنگام تست</h2>
+<ul>
+<li>راهنمای <a href="02-components.html">کاربرد ۴۹ کامپوننت</a> را باز کن؛ بدون اینترنت و در مرورگر خوانده می‌شود.</li>
+<li>برای تحلیل سالانه، مسیر فایل آب‌وهوایی <code>EPW</code> محل پروژه را بده. این فایل داخل بسته نیست.</li>
+<li>نور روز سریع به Radiance نیاز ندارد. <code>XV Radiance</code> فایل‌های صحنه را برای Radiance خروجی می‌گیرد؛ اجرای محاسبهٔ مرجع به نصب جداگانهٔ Radiance و runner نیاز دارد که در این بستهٔ ساده قرار نگرفته‌اند.</li>
+<li>اگر تب XVARNA ظاهر نشد: نسخهٔ پوشه، مسیر کتابخانه، Unblock و نبود نصب تکراری را بررسی کن. اگر <code>Ready=False</code> شد، کنار هم بودن DLLها و متن پیام کامپوننت را بررسی کن.</li>
+<li>برای حذف نصب، مسیر XVARNA را از کتابخانهٔ گرس‌هاپر حذف کن؛ برای GH2 پلاگین را در PlugInManager غیرفعال کن. بعد از بستن راینو می‌توانی پوشهٔ استخراج‌شده را حذف کنی.</li>
+</ul>
+<h2>چه بازخوردی بفرستی؟</h2>
+<p>کافی است بگویی چه نسخه‌ای از راینو و گرس‌هاپر داشتی، کدام مثال یا کامپوننت را امتحان کردی و چه چیزی درست کار نکرد یا نامفهوم بود. اگر خطایی دیدی، متن یا عکس آن همراه نام کامپوننت کافی است؛ فرم مفصل لازم نیست.</p>
+</html>

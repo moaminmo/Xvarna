@@ -1,0 +1,17 @@
+---
+name: xvarna
+version: 1.0.0-rc.1
+authors:
+  - XVARNA contributors
+description: >
+  High-performance computational design for Rhino and Grasshopper: portable
+  GPU/CPU visibility, solar, daylight, scene lifecycle, and design studies.
+url: https://github.com/moaminmo/Xvarna
+keywords:
+  - grasshopper
+  - computational-design
+  - environmental-analysis
+  - visibility
+  - daylight
+  - optimization
+  - rust
