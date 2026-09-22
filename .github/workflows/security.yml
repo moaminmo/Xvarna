@@ -20,7 +20,7 @@ jobs:
   rustsec:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Audit Rust dependencies
         uses: actions-rust-lang/audit@v1
         with:
@@ -30,7 +30,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Reject vulnerable dependency changes
         uses: actions/dependency-review-action@v5
         with:
