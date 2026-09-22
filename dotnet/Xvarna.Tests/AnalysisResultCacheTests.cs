@@ -1,6 +1,7 @@
 using Xunit;
 using Xvarna.Grasshopper;
 namespace Xvarna.Tests;
+
 public sealed class AnalysisResultCacheTests
 {
     [Fact]
